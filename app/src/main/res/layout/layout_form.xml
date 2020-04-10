@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+
+        <TextView
+            android:id="@+id/main_title"
+            style="@style/headerTextPrimary"
+            android:text="@string/en_main_title"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPostalCode"
+            style="@style/parent"
+            android:hint="@string/en_postal_code_hint"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextPostalCode"
+                style="@style/modifiedEditText"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:id="@+id/textInputPasport"
+            android:hint="@string/en_id_number"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextIDnumber"
+                style="@style/modifiedEditText"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:inputType="number"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/reason_text"
+            style="@style/parent"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:layout_marginStart="2dp"
+            android:textStyle="bold"
+            android:text="@string/en_reason_text"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/choice1"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_1" />
+
+            <RadioButton
+                android:id="@+id/choice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_2" />
+
+            <RadioButton
+                android:id="@+id/choice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_3" />
+
+            <RadioButton
+                android:id="@+id/choice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_4" />
+
+            <RadioButton
+                android:id="@+id/choice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_5" />
+
+            <RadioButton
+                android:id="@+id/choice6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_6" />
+
+            <RadioButton
+                android:id="@+id/choice7"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/en_selection_7" />
+
+            <RadioButton
+                android:id="@+id/choice8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/en_selection_8" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/cirSEND_SMSButton"
+            style="@style/loginButton"
+            android:text="@string/en_send_button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
